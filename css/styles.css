@@ -1,0 +1,391 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #141279;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    flex-shrink: 0; /* Asegura que el logo no se reduzca */
+}
+
+.logo img {
+    height: 50px;
+    width: auto; /* Mantiene el aspecto del logo */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+nav a.activo {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #F24059;
+}
+
+/* Estilos del icono de WhatsApp */
+.whatsapp-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.whatsapp-icon a {
+    color: #25D366;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.whatsapp-icon a:hover {
+    color: #128C7E;
+    animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Estilos del hero */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    text-align: justify;
+    line-height: 1.6;
+    hyphens: auto; /* Permite la separación de palabras */
+}
+
+/* Estilos de la barra de búsqueda */
+.search-bar {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search-bar button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #004494;
+}
+
+/* Estilos de las categorías */
+.categories {
+    text-align: center;
+    margin: 20px;
+}
+
+.categories a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #0056b3;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.categories a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Estilos de la cuadrícula de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    height: 100%;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Permite que el contenedor crezca */
+}
+
+.product-info h3 {
+    margin: 10px 0;
+    font-size: 1.125rem;
+    text-align: center;
+    height: 2.5em; /* Ajusta la altura */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #141279;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Botón */
+button {
+    background-color: #0056b3; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Elimina el borde del botón */
+    padding: 12px 24px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    text-decoration: none; /* Elimina cualquier subrayado */
+    display: inline-block; /* Alinea el botón correctamente */
+    margin: 10px auto; /* Margen automático para centrar */
+}
+
+button:hover {
+    background-color: #F24059; /* Color de fondo al pasar el ratón por encima */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #141279;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 24px;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #F24059;
+}
+
+.social-media i {
+    transition: color 0.3s ease;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .whatsapp-icon {
+        margin-top: 10px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .search-bar input[type="text"] {
+        width: 90%;
+    }
+    
+    .search-bar button {
+        width: 100%;
+    }
+    
+    nav a {
+        font-size: 16px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 0.875rem;
+    }
+    
+    .search-bar input[type="text"] {
+        font-size: 0.875rem;
+    }
+    
+    .search-bar button {
+        font-size: 0.875rem;
+    }
+    
+    .categories a {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    
+    .product-info h3 {
+        font-size: 1rem;
+        height: 3em; /* Ajusta la altura para pantallas pequeñas */
+    }
+    
+    .product-price {
+        font-size: 14px;
+    }
+    
+    .social-media a {
+        font-size: 18px;
+    }
+}
+
